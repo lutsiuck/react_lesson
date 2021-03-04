@@ -11,7 +11,7 @@ import HomeContainer from "./pages/Home/HomeContainer";
 
 function App() {
   return (
-    <div className="main">
+    <div className="container main">
         <Header />
         <Route exact path="/">
           <HomeContainer />
