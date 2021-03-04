@@ -4,7 +4,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 
 const Home = (props) => {
 
-    let posts = props.posts.map( (p) => <Post post={p} /> )
+    let posts = props.posts.posts.map( (p) => <Post post={p} /> )
 
     return (
         <main className="container pt-5 pb-5">

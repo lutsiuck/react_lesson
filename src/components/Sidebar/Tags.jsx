@@ -3,7 +3,7 @@ import React from 'react';
 const Labels = () => {
     return (
         <div className="p-4">
-            <h4 className="fst-italic">Tabs</h4>
+            <h4 className="fst-italic">Tags</h4>
             <ol className="list-unstyled mb-0">
                 <li><a href="#">March 2014</a></li>
                 <li><a href="#">February 2014</a></li>
