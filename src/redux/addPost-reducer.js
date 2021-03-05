@@ -17,8 +17,8 @@ const addPostCreator = (state = statePosts, action) => {
         case ADD_POST:
             let newPost = {id: 5, title: action.title, desc: action.desc}
             let stateCopy = {...state}
-            stateCopy.posts = [...state.posts]
-            stateCopy.posts.push(newPost);
+            stateCopy.posts = [...state.posts, newPost]
+            // stateCopy.posts.push(newPost);
             stateCopy.postText = ""
             return stateCopy;
         default:

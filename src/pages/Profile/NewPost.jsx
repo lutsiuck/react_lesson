@@ -20,7 +20,7 @@ let NewPost = (props) => {
     }
 
 
-    let posts = props.posts.posts.map( (p) => <Post post={p} /> )
+    let posts = props.posts.posts.map( (p) => <Post key={p.id} post={p} /> )
 
     return (
         <div>

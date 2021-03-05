@@ -7,6 +7,8 @@ import Header from './components/Header/Header';
 import MyPosts from './pages/Profile/MyPosts';
 import NewPostContainer from "./pages/Profile/NewPostContainer";
 import HomeContainer from "./pages/Home/HomeContainer";
+import Blogs from "./pages/Blogs/Blogs";
+import UsersContainer from "./pages/Users/UsersContainer";
 
 
 function App() {
@@ -18,6 +20,12 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/blogs">
+          <Blogs />
+        </Route>
+        <Route path="/users">
+          <UsersContainer />
         </Route>
         <Route path="/login">
           <Login />

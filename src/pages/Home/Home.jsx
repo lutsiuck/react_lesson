@@ -4,7 +4,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 
 const Home = (props) => {
 
-    let posts = props.posts.posts.map( (p) => <Post post={p} /> )
+    let posts = props.posts.posts.map( (p) => <Post key={p.id} post={p} /> )
 
     return (
         <main className="container pt-5 pb-5">
@@ -13,6 +13,7 @@ const Home = (props) => {
                     <div className="row">
                         { posts }
                     </div>
+                    <button type="button" className="btn btn-outline-dark">Show more</button>
                 </div>
                 <Sidebar />
             </div>
