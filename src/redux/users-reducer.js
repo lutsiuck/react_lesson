@@ -16,9 +16,6 @@ const userReducer = ( state = initialState, action ) => {
     }
 }
 
-// export const userActionCreator = () => ({
-//     type: USERS
-// })
 export const setUsersAC = (users) => ({type: SET_USERS, users})
 
 
