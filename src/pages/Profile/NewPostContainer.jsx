@@ -1,23 +1,17 @@
 import React  from 'react';
 import { connect } from 'react-redux';
 import NewPost from "./NewPost"
-import {addPostActionCreator, setPostAC} from "../../redux/addPost-reducer"
+import {addPost, setPosts} from "../../redux/addPost-reducer"
 
 let mapStateToProps = (state) => {
     return{
-        posts: state.posts
+        posts: state.postsPage.posts
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    return{
-        addPost: (title, desc) => {
-            dispatch(addPostActionCreator(title, desc))
-        },
-        setPost: (posts) => {
-            dispatch(setPostAC(posts))
-        }
-    }
+let mapDispatchToProps = {
+    addPost,
+    setPosts
 }
 
 const NewPostContainer = connect(mapStateToProps, mapDispatchToProps)(NewPost)

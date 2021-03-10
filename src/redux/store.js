@@ -5,7 +5,7 @@ import userReducer from "./users-reducer";
 
 
 let reducers = combineReducers({
-    posts: addPostActionCreator ,
+    postsPage: addPostActionCreator ,
     usersPage: userReducer
 });
 

@@ -3,8 +3,6 @@ import Post from '../../components/Post/Post';
 
 let NewPost = (props) => {
 
-    let state = props.posts
-
     let newTitle = React.createRef();
     let newDesc = React.createRef();
 
@@ -20,7 +18,7 @@ let NewPost = (props) => {
     }
 
 
-    let posts = props.posts.posts.map( (p) => <Post key={p.id} post={p} /> )
+    let posts = props.posts.map( (p) => <Post key={p.id} post={p} /> )
 
     return (
         <div>

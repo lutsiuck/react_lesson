@@ -1,20 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setPostAC } from '../../redux/addPost-reducer';
+import { setCurrentPage, setPosts, setTotalPosts, toggleIsFetching } from '../../redux/addPost-reducer';
 import Home from './Home';
 
 let mapStateToProps = (state) => {
     return{
-        posts: state.posts
+        posts: state.postsPage.posts,
+        postsCount: state.postsPage.postsCount,
+        pageLimit: state.postsPage.pageLimit,
+        pageCurrent: state.postsPage.pageCurrent,
+        isFetching: state.postsPage.isFetching
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    return{
-        setPosts: (posts) => {
-            return dispatch(setPostAC(posts))
-        }
-    }
+let mapDispatchToProps = {
+        setPosts,
+        setCurrentPage,
+        setTotalPosts,
+        toggleIsFetching,
 }
 
 const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home)
